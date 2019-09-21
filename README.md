@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hole In The Wall
+### When you wanna go where nobody knows your name
 
-## Available Scripts
+#### By _**Josh Mabry**_
 
-In the project directory, you can run:
+## Intro
+_This is my capstone project for Epicodus' Ruby on Rails / React Bootcamp. I wanted to showcase my wide range of skills as I attempt to join the tech community and become a full-stack React developer._
 
-### `npm start`
+## Concept
+_This project was inspired by solo dining ramen houses in Japan, where everyone sits at a bar separated into stalls after purchasing a ticket for soup at a vending machine. Food is served through windows in the wall by disembodied arms and everyone is expected to remain silent. I thought up the concept of a bar that ran in a similar fashion. Individual rooms where patrons place orders in a tablet at the table and receive their drinks through the window, a literal hole in the wall kinda place.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is what I envisioned this bar's point of sale / data system would look like from both an employee and customers perspective._
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Flowchart/MVP
+![Component Tree](./public/HoleInTheWallFinal.svg)
 
-### `npm test`
+## WireFrame
+* Work in Progress
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Here is an unfinished 3d model of a room in the bar I worked on for the splash page and a tutorial component
 
-### `npm run build`
+![3D render of bar](./public/HoleInWallRender.png)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies used
+* ReactJS
+* Redux
+* Firebase
+* VX Data Visualization Library
+* Blender (3d modeling/animation)
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Setup/Installation Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Clone or download and run npm install
+* Run npm run start and navigate to localhost:3000 in your browser
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Known Bugs
+* Submit a pull request or contact Josh at mabry1985@gmail.com to report any bugs
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### License
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* _open source_
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2019 **_Josh Mabry_**
