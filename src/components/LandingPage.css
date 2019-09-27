@@ -7,6 +7,8 @@
 .logo-landing-page {
   position: absolute;
   top: 600px;
+  left: 63px;
+  z-index: 10;
 }
 
 .logo-landing-page-shadow {
@@ -19,13 +21,32 @@
 .landing-page-btns {
   position: absolute;
   top: 175px;
-  left: 10px;
+  left: 95px;
+  z-index: 10;
 }
 
-.login, .new-account {
+.temp-room {
+  position: relative;
+  left: 562px;
+  top: 116px;
+  width: 797px;
+  z-index: 1;
+}
+
+.landing-bg-layer {
+  position: absolute;
+  top: -338px;
+  right: -221px;
+  width: 2700px;
+  z-index: 2;
+}
+
+.log-in, .sign-up {
   border-radius: 35px;
   background-color: #E1D25c;
   width: 169px;
   height: 75px;
   margin: 15px;
+  box-shadow: 5px 10px #5C5941;
+  outline: 0;
 }
