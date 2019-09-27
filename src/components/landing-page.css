@@ -7,9 +7,10 @@
 }
 
 .logo-landing-page {
-  position: absolute;
-  top: 577px;
-  left: 160px;
+ position: absolute;
+  top: 593px;
+  left: 171px;
+  width: 326px;
   z-index: 10;
 }
 

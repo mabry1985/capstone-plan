@@ -3,7 +3,8 @@ import Model from './Model';
 import logo from '../assets/images/Logo Small.png';
 import bg from '../assets/images/landing-page-bg.png';
 import tempRoom from '../assets/images/landing-page-bg-room.png'
-import './LandingPage.css'
+import './landing-page.css'
+import { Link } from 'react-router-dom';
 
 class LandingPage extends React.Component {
     render() {
@@ -14,17 +15,17 @@ class LandingPage extends React.Component {
               src={bg} 
               alt="background layer" />
             <div className='landing-page'>
-                <div className="bg">
-                </div>
                 <div className="landing-page-btns">
-                    <button className="btn-large log-in">Log In</button> 
+                    <Link to="/log-in">
+                      <button className="log-in">Log In</button> 
+                    </Link>
                     <br />
-                    <button className="btn-large sign-up">Sign Up</button>
+                    <Link to="/sign-up">
+                      <button className="sign-up">Sign Up</button>
+                    </Link>
                 </div>
-                <div className="logo-landing-page">
-                    <img src={logo} alt="logo"/>
-                    {/* <img src={logo} alt="logo shadow" className="logo-landing-page-shadow"/> */}
-                </div>
+                 <img className="logo-landing-page" src={logo} alt="logo"/>
+                  {/* <img src={logo} alt="logo shadow" /> */}
                 <img className="temp-room" src={tempRoom} alt=""/>
                 <Model/>
             </div>
