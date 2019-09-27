@@ -11,6 +11,7 @@ export class Profile extends Component {
           <ul>
             <li className="name">Josh Mabry</li>
             <li className="balance">Balance: $100.00</li>
+            <li className="add-funds">Add Funds</li>
             <li className="logout">Logout</li>
             <li className="profile">Profile</li>
           </ul>

@@ -14,12 +14,15 @@ const signIn = () => {
                     <input type="password" id="password" onChange={this.handleChange} />
                 </div>
                 <div className="input-field">
-                    <button className="btn pink lighten-1 z-depth-0">Sign In</button>
-                    <div className="red-text center">
+                    <button className="btn z-depth-0">Sign In</button>
+                    <div className="center">
                         {/* {authError ? <p>{authError}</p> : null} */}
                     </div>
                 </div>
             </form>
+            <div className="logo">
+                <img src="#" alt="logo" />
+            </div>
         </div>
     );
 }

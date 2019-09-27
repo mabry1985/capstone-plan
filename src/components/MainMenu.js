@@ -21,6 +21,9 @@ const mainMenu = () => {
             <div className="menu-button">
                 <Link to='/games'>Games</Link>
             </div>
+            <div className="logo">
+                <img src="#" alt="logo" />
+            </div>
         </div>
     )
 }

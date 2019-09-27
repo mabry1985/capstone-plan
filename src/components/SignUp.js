@@ -24,10 +24,13 @@ const signUp = () => {
                 <div className="input-field">
                     <button className="btn z-depth-0">Sign Up</button>
                 </div>
-                <div className="red-text center">
+                <div className="center">
                     {/* {authError ? <p>{authError}</p> : null} */}
                 </div>
             </form>
+            <div className="logo">
+                <img src="#" alt="logo" />
+            </div>
         </div>
     );
 }
