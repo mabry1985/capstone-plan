@@ -1,6 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Model from './Model';
 
-const landingPage = () => {
+class LandingPage extends React.Component {
+    render() {
     return (
         <div className='landing-page'>
             <button>Login</button>
@@ -8,8 +10,9 @@ const landingPage = () => {
             <div className="logo">
                 <img src="#" alt="logo"/>
             </div>
+            <Model/>
         </div>
-    )
+    )}
 }
 
-export default landingPage
+export default LandingPage

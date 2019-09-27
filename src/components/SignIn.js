@@ -1,6 +1,6 @@
 import React from 'react'
 
-const signIn = () => {
+const SignIn = () => {
     return (
         <div className="container">
             <form onSubmit={this.handleSubmit} className="white">
@@ -27,4 +27,4 @@ const signIn = () => {
     );
 }
 
-export default signIn
+export default SignIn

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const pointOfSale = () => {
+const PointOfSale = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const pointOfSale = () => {
     )
 }
 
-export default pointOfSale
+export default PointOfSale
