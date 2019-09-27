@@ -1,0 +1,31 @@
+.landing-page {
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+}
+
+.logo-landing-page {
+  position: absolute;
+  top: 600px;
+}
+
+.logo-landing-page-shadow {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+}
+
+.landing-page-btns {
+  position: absolute;
+  top: 175px;
+  left: 10px;
+}
+
+.login, .new-account {
+  border-radius: 35px;
+  background-color: #E1D25c;
+  width: 169px;
+  height: 75px;
+  margin: 15px;
+}
