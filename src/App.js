@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="App">
       <Switch>
-          <LandingPage />
           <Route exact path='/' component={LandingPage} />
           <Route exact path='/log-in' component={LogIn} />
           <Route exact path='/sign-up' component={SignUp} />

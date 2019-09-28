@@ -9,7 +9,7 @@
 .logo-landing-page {
  position: absolute;
   top: 593px;
-  left: 171px;
+  left: 201px;
   width: 326px;
   z-index: 10;
 }
@@ -40,16 +40,16 @@
 .landing-page-btns {
   position: absolute;
   top: 175px;
-  left: 188px;
+  left: 211px;
   z-index: 10;
 }
 
 .log-in, .sign-up {
-  padding-bottom: 5px;
+  padding-bottom: 68px;
   border-radius: 35px;
   background-color: #E1D25c;
-  width: 169px;
-  height: 75px;
+  width: 177px;
+  height: 64px;
   margin: 15px;
   box-shadow: 5px 10px #5C5941;
   outline: 0;
