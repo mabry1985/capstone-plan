@@ -1,27 +1,8 @@
 .logo-sign-up {
+  padding: 45px;
   width: 200px;
 }
 
 .sign-up-h5 {
   background: #E1D25c;
-}
-
-.sign-up-button {
-  padding-bottom: 68px;
-  border-radius: 35px;
-  background-color: #E1D25c;
-  width: 177px;
-  height: 64px;
-  margin: 15px;
-  box-shadow: 5px 10px #5C5941;
-  outline: 0;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 45px;
-  color: #5C5941;
-}
-
-input {
-  text-align: center;
-  width: 400px;
-  height: 40px;
 }

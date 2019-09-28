@@ -9,7 +9,7 @@
 .logo-landing-page {
  position: absolute;
   top: 593px;
-  left: 201px;
+  left: 194px;
   width: 326px;
   z-index: 10;
 }
@@ -42,19 +42,4 @@
   top: 175px;
   left: 211px;
   z-index: 10;
-}
-
-.log-in, .sign-up {
-  padding-bottom: 68px;
-  border-radius: 35px;
-  background-color: #E1D25c;
-  width: 177px;
-  height: 64px;
-  margin: 15px;
-  box-shadow: 5px 10px #5C5941;
-  outline: 0;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 45px;
-  color: #5C5941;
-
 }
