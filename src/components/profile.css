@@ -1,0 +1,37 @@
+.profile {
+  display: inline-block;
+}
+
+.profile-button {
+  border: 2px solid #FCF6CA;
+  border-radius: 100%;
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  right: 30px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 30px;
+  color: #FCF6CA;
+}
+
+.initials {
+  position: relative;
+  top: -43px;
+  left: 9px;
+}
+
+.table {
+  display: table;
+  margin: 0 auto;
+}
+
+ul#list {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+	ul#list li {
+    display: inline;
+    padding-left: 5px;
+    padding-top: 5px;
+	}

@@ -1,14 +1,20 @@
 .main-menu-buttons-div {
-  padding-top: 72px;
-  margin: auto;
+  padding-top: 85px;
+  margin: 120px auto;
   text-align: center;
   width: 800px;
 }
 
 .main-menu-buttons {
   width: 230px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  border-radius: 100%;
+}
+
+.main-menu-buttons:hover {
+  border-radius: 100%;
+  box-shadow: 0 0 44px #FCF6CA;;
 }
 
 .logo-main-menu {
