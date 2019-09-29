@@ -1,6 +1,6 @@
 import React from 'react';
 import Model from './Model';
-import logo from '../assets/images/Logo Small.png';
+import logo from '../assets/images/logo-small.png';
 import bg from '../assets/images/landing-page-bg.png';
 import tempRoom from '../assets/images/landing-page-bg-room.png'
 import './landing-page.css'

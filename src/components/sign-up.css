@@ -3,6 +3,66 @@
   width: 200px;
 }
 
-.sign-up-h5 {
-  background: #E1D25c;
+.input-div-sign-up{
+  position: relative;
+  right: 25px;
+}
+
+.sign-up-form {
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 10px
+}
+
+.email-input-sign-up {
+  position: relative;
+  left: 5px;
+}
+
+.password-input-sign-up {
+  position: relative;
+  right: 9px;
+}
+
+.first-name-input-sign-up {
+  position: relative;
+  right: 14px;
+}
+
+.last-name-input-sign-up {
+  position: relative;
+  right: 13px;
+}
+
+.sign-up-button {
+  margin-top: 0px;
+}
+
+.tos {
+  position: relative;
+  bottom: 59px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #FCF6CA;
+}
+
+.tos-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+#tos-checkbox {
+  margin: -10px;
+  position: relative;
+  left: 12px;
+}
+
+#checkbox {
+  position:relative;
+  width: 20px;
+  right: 197px;
+}
+
+#checkbox:focus {
+  box-shadow: 0 0 0 black;
 }

@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i&display=swap');
-
 .logo-log-in {
   padding: 45px;
   width: 200px;
 }
 
-.input-div {
+.input-div-log-in {
   position: relative;
   right: 25px;
 }
@@ -17,16 +15,18 @@
   top: 120px;
 }
 
-.email-input {
+.email-input-log-in {
   position: relative;
   left: 3px;
-
 }
 
-.password-input {
+.password-input-log-in {
   position: relative;
   right: 10px;
 }
 
+.log-in-button {
+  margin-top: 75px;
+}
 
 
