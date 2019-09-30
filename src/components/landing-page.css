@@ -19,11 +19,11 @@
 }
 
 .temp-room {
-  position: relative;
+  position: absolute;
   left: 562px;
   top: 116px;
   width: 797px;
-  z-index: 1;
+  z-index: -3;
 }
 
 .landing-bg-layer {
@@ -32,13 +32,13 @@
   right: -221px;
   width: 2700px;
   margin-left: 100px;
-  z-index: 2;
-  transition: right 1.5s;
+  z-index: -2;
+  transition: transform 1500ms;
+  will-change: transform;
 }
 
 .wrapper.is-nav-open {
-  position: absolute;
-  right: -1259px;
+  transform: translateX(1040px)
 }
 
 .landing-page-btns {

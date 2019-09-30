@@ -3,12 +3,17 @@
   width: 200px;
 }
 
+.logo-sign-up:hover {
+  cursor: pointer;
+}
+
 .input-div-sign-up{
   position: relative;
   right: 25px;
 }
 
 .sign-up-form {
+  z-index: 10000;
   display: block;
   text-align: center;
   position: relative;

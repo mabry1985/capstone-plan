@@ -54,3 +54,7 @@ button:focus {
   top: 5px;
   box-shadow: 0px 2px #5C5941;
 }
+
+.a11y {
+  visibility: hidden;
+}

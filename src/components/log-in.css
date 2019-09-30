@@ -3,12 +3,17 @@
   width: 200px;
 }
 
+.logo-log-in:hover {
+  cursor: pointer;
+}
+
 .input-div-log-in {
   position: relative;
   right: 25px;
 }
 
 .log-in-form {
+  z-index: 10000;
   display: block;
   text-align: center;
   position: relative;
@@ -22,7 +27,7 @@
 
 .password-input-log-in {
   position: relative;
-  right: 10px;
+  right: 11px;
 }
 
 .log-in-button {
