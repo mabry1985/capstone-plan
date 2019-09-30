@@ -16,7 +16,6 @@
   position: absolute;
   top: 0px;
   left: 0px;
-
 }
 
 .temp-room {
@@ -32,7 +31,14 @@
   top: -338px;
   right: -221px;
   width: 2700px;
+  margin-left: 100px;
   z-index: 2;
+  transition: right 1.5s;
+}
+
+.wrapper.is-nav-open {
+  position: absolute;
+  right: -1259px;
 }
 
 .landing-page-btns {

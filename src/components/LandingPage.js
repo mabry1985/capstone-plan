@@ -17,17 +17,16 @@ class LandingPage extends React.Component {
   }
 
   handleClickLogIn = (state) => {
-    this.setState({
-      logIn: true,
-    })
-    console.log(this.state)
+    const wrapper = document.getElementById('wrapper');
+    wrapper.classList.toggle('is-nav-open')
   }
 
   render() {
     return (
         <main>
-            <img 
-              className= "landing-bg-layer" 
+            <img
+              id="wrapper"
+              className= "wrapper landing-bg-layer" 
               src={bg} 
               alt="background layer" />
             <div className='landing-page'>

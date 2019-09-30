@@ -10,6 +10,7 @@
   margin-left: 15px;
   margin-right: 15px;
   border-radius: 100%;
+  transition: box-shadow .5s, 
 }
 
 .main-menu-buttons:hover {
