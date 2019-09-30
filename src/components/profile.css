@@ -9,9 +9,11 @@
   width: 42px;
   height: 42px;
   right: 30px;
+  top: 30px;
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 30px;
   color: #FCF6CA;
+  transition: all 1s;
 }
 
 .initials {
@@ -21,6 +23,12 @@
 }
 
 .table {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+  color: #FCF6CA;
+  position: absolute;
+  right: -195px;
+  top: -7px;
   display: table;
   margin: 0 auto;
 }
