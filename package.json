@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "aframe-react": "^4.4.0",
+    "firebase": "^7.0.0",
     "react": "^16.9.0",
     "react-animations": "^1.0.0",
     "react-dom": "^16.9.0",
