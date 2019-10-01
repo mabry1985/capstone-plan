@@ -65,10 +65,18 @@ const menuReducer = (state = initState, action) => {
       console.log('created food', action);
     return state;
 
+    case 'CREATE_FOOD_ERROR':
+      console.log('create food error', action.err);
+      return state;
+
     case 'CREATE_BEER':
       console.log('created beer', action)
-    return state
-    
+    return state;
+
+    case 'CREATE_BEER_ERROR':
+      console.log('create beer error', action.err);
+      return state;
+
     default: 
     return state;
   }
