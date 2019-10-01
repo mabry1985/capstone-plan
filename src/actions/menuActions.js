@@ -1,5 +1,6 @@
 export const createFood = (food) => {
-  return (dispatch, getState) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+
     dispatch({type: 'CREATE_FOOD', food})
   }
 }
