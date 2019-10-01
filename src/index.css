@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap');
+
 body {
   height: 100%;
   margin: 0;
@@ -19,7 +21,7 @@ code {
 
 input {
   border-radius: 10px;
-  border: 0px;
+  border:1px solid rgb(92, 89, 65, 0);
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 40px;
   text-align: center;
@@ -30,7 +32,7 @@ input {
 
 input:focus {
     outline: none !important;
-    border:1px solid #5C5941;
+    border:1px solid rgb(92, 89, 65,);
     box-shadow: 0 0 10px #719ECE;
 }
 

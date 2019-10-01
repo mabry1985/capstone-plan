@@ -27,25 +27,17 @@ export class Profile extends Component {
     console.log(this.state)
   }
   
-  borderStyles = {
-  }
-
-  optionStyles = {}
-
+  
   render() {
-    let options = null
+    let borderStyles = {
+    }
     if (this.state.selected) {
-      this.borderStyles = { 
+      borderStyles = { 
         transform: 'scale(.5, .5)',
         backgroundColor: '#FCF6CA',
       };
-      options = 
-      <FadeIn>
-
-      </FadeIn>
-
     }else {
-      this.borderStyles = {};
+      borderStyles = {};
     }
 
     return (
@@ -62,7 +54,7 @@ export class Profile extends Component {
             <li className="logout">Logout </li>
           </ul>
         </div>
-        <div style={this.borderStyles} onClick={this.handleToggle} className="profile-button">
+        <div style={borderStyles} onClick={this.handleToggle} className="profile-button">
           <h4 className="initials">JM</h4>
         </div>
         <div className="profile-mask"></div>

@@ -14,7 +14,11 @@
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 30px;
   color: #FCF6CA;
-  transition: all 1s;
+  transition: all 1s ease-in-out;
+}
+
+.profile-button:hover {
+  cursor: pointer;
 }
 
 .initials {
@@ -26,6 +30,7 @@
 .table {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 22px;
+  font-weight: bold;
   color: #FCF6CA;
   position: absolute;
   right: -635px;
@@ -33,7 +38,7 @@
   display: table;
   margin: 0 auto;
   z-index: -10;
-  transition: transform 1s;
+  transition: transform 1s ease-in-out 200ms;
 }
 
 .options.is-profile-open {
