@@ -2,7 +2,7 @@ import React from 'react'
 
 const Beer = (props) => {
   return (
-    <div class="menu-items" key={props.beer.id}>
+    <div className="menu-items" key={props.beer.id}>
       <h3>{props.beer.name} - {props.beer.abv}%</h3>
       <p><em>{props.beer.brewery}</em></p>
       <p>${props.beer.price}.00</p>

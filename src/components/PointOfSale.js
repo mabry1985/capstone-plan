@@ -6,11 +6,10 @@ import { connect } from 'react-redux';
 class PointOfSale extends React.Component {
   render(){
     const { beer, food } = this.props
-    console.log(this.props);
     return (
       <div className="menu">
         <div className="beer-list">
-          {beer.map(beer => (
+          { beer && beer.map(beer => (
             <div key={beer.id}>
               {/* {keg.editing ? <EditKeg keg={keg} key={keg.id} /> : */}
                 <Beer key={beer.id} beer={beer} />
@@ -18,7 +17,7 @@ class PointOfSale extends React.Component {
           ))}
         </div>
         <div className="food-list">
-        {food.map(food => (
+        { food && food.map(food => (
           <div key={food.id}>
             {/* {keg.editing ? <EditKeg keg={keg} key={keg.id} /> : */}
               <Food key={food.id} food={food} />
