@@ -29,8 +29,7 @@ export class Profile extends Component {
   
   
   render() {
-    let borderStyles = {
-    }
+    let borderStyles = {}
     if (this.state.selected) {
       borderStyles = { 
         transform: 'scale(.5, .5)',

@@ -14,7 +14,7 @@
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 30px;
   color: #FCF6CA;
-  transition: all 1s ease-in-out;
+  transition: all 750ms ease-in-out;
 }
 
 .profile-button:hover {
@@ -31,14 +31,14 @@
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 22px;
   font-weight: bold;
-  color: #FCF6CA;
+  color: rgb(235, 229, 187);
   position: absolute;
   right: -635px;
   top: -7px;
   display: table;
   margin: 0 auto;
   z-index: -10;
-  transition: transform 1s ease-in-out 200ms;
+  transition: transform 750ms ease-in-out 200ms;
 }
 
 .options.is-profile-open {
