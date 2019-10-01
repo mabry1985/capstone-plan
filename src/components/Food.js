@@ -2,7 +2,7 @@ import React from 'react'
 
 const Food = (props) => {
   return (
-    <div class="menu-items" key={props.food.id}>
+    <div className="menu-items" key={props.food.id}>
         <h3>{props.food.name}</h3>
         <p>${props.food.price}.00</p>
         <p>{props.food.description}</p>

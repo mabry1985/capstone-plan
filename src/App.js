@@ -6,7 +6,6 @@ import Model from './components/Model.js';
 import PointOfSale from './components/PointOfSale.js';
 import NewMenuItems from './components/NewMenuItems.js';
 
-
 function App() {
   return (
     <div className="App">

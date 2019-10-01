@@ -2,6 +2,8 @@ import React from 'react';
 import Beer from './Beer';
 import Food from './Food';
 import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 class PointOfSale extends React.Component {
   render(){
@@ -29,10 +31,23 @@ class PointOfSale extends React.Component {
   }
 }
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
-    food: state.menu.food,
-    beer: state.menu.beer,
+    food: state.firestore.ordered.food,
+    beer: state.firestore.ordered.beers,
   }
 }
 
-export default connect(mapStateToProps)(PointOfSale)
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([
+    { 
+      collection: 'food',
+    }
+  ]),
+    firestoreConnect([
+      {
+        collection: 'beers',
+      }
+    ])
+)(PointOfSale)
