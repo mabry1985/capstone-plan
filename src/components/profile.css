@@ -4,6 +4,7 @@
 
 .profile-button {
   border: 2px solid #FCF6CA;
+  background-color: black;
   border-radius: 100%;
   position: absolute;
   width: 42px;
@@ -27,10 +28,26 @@
   font-size: 22px;
   color: #FCF6CA;
   position: absolute;
-  right: -195px;
+  right: -635px;
   top: -7px;
   display: table;
   margin: 0 auto;
+  z-index: -10;
+  transition: transform 1s;
+}
+
+.options.is-profile-open {
+  transform: translateX(-440px)
+}
+
+.profile-mask {
+  position: absolute;
+  right: -46px;
+  z-index: -1;
+  top: 41px;
+  background: black;
+  height: 24px;
+  width: 100px;
 }
 
 ul#list {

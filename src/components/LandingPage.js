@@ -51,6 +51,7 @@ class LandingPage extends React.Component {
 
   render() {
     let content = null;
+    // eslint-disable-next-line no-lone-blocks
     {if (!this.state.logIn && !this.state.signUp ) {
       content = <div className='landing-page'>
         <div className="landing-page-btns">
@@ -78,7 +79,7 @@ class LandingPage extends React.Component {
           alt="background layer" />
         {this.state.logIn ? <LogIn onClickLogIn={this.handleClickLogIn}/> : null}
         {this.state.signUp ? <SignUp onClickSignUp={this.handleClickSignUp}/> : null}
-      {content}
+        {content}
             {/* <img src={logo} alt="logo shadow" /> */}
           <img className="temp-room" src={tempRoom} alt=""/>
 

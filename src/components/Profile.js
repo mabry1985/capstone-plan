@@ -4,7 +4,6 @@ import { fadeIn, fadeOut } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
 
 const FadeIn = styled.div`animation: 1s ease-in ${keyframes`${fadeIn}`}`
-const FadeOut = styled.div`animation: 1s ease-in ${keyframes`${fadeOut}`}`
 
 export class Profile extends Component {
   constructor(props){
@@ -16,6 +15,8 @@ export class Profile extends Component {
   }
   
   handleToggle = () => {
+    const wrapper = document.getElementById('options');
+    wrapper.classList.toggle('is-profile-open')
     this.setState((prevState) => {
       if (this.state.selected) {
         return { selected: false }
@@ -29,6 +30,8 @@ export class Profile extends Component {
   borderStyles = {
   }
 
+  optionStyles = {}
+
   render() {
     let options = null
     if (this.state.selected) {
@@ -38,8 +41,16 @@ export class Profile extends Component {
       };
       options = 
       <FadeIn>
-      {/* <FadeOut> */}
-        <div className="table">
+
+      </FadeIn>
+
+    }else {
+      this.borderStyles = {};
+    }
+
+    return (
+      <div className="profile">
+        <div className="table options" id="options">
           <ul id="list">
             <li className="name">Josh Mabry:</li>
             <li className="balance">$100.00 </li>
@@ -51,22 +62,10 @@ export class Profile extends Component {
             <li className="logout">Logout </li>
           </ul>
         </div>
-        {/* </FadeOut> */}
-      </FadeIn>
-
-    }else {
-      this.borderStyles = {};
-    }
-
-    return (
-      <div className="profile">
-        <FadeIn>
-          {options}
-        </FadeIn>
-  
         <div style={this.borderStyles} onClick={this.handleToggle} className="profile-button">
           <h4 className="initials">JM</h4>
         </div>
+        <div className="profile-mask"></div>
       </div>
     )
   }

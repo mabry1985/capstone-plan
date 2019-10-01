@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { fadeIn } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
 
-const FadeIn = styled.div`animation: 3s ease-in ${keyframes`${fadeIn}`}`
+const FadeIn = styled.div`animation: 2500ms ease-in ${keyframes`${fadeIn}`}`
 
 const SignUp = (props) => {
 
