@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { createBeer } from './../actions/menuActions.js';
-import { Redirect } from 'react-router-dom'
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 
 class CreateBeer extends Component {
   state = {
@@ -20,13 +21,12 @@ class CreateBeer extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submit');
-
+    this.props.createBeer(this.state)
   };
 
   render() {
-    const { auth } = this.props;
-    if (!auth.uid) return <Redirect to='/' />
+    // const { auth } = this.props;
+    // if (!auth.uid) return <Redirect to='/' />
     return (
       <div className="new-beer-form">
         <form onSubmit={this.handleSubmit} className="white">
@@ -64,4 +64,10 @@ class CreateBeer extends Component {
   }
 }
 
-export default CreateBeer;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createBeer: (beer) => dispatch(createBeer(beer))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CreateBeer);

@@ -60,7 +60,19 @@ const initState = {
 }
 
 const menuReducer = (state = initState, action) => {
-  return state;
+  switch (action.type) {
+    case 'CREATE_FOOD':
+      console.log('created food', action);
+    return state;
+
+    case 'CREATE_BEER':
+      console.log('created beer', action)
+    return state
+    
+    default: 
+    return state;
+  }
+
 }
 
 export default menuReducer

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { createFood } from './../actions/menuActions.js';
+import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
 class CreateFood extends Component {
@@ -17,13 +18,13 @@ class CreateFood extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submit');
+    this.props.createFood(this.state)
     
   };
 
   render() {
-    const { auth } = this.props;
-    if (!auth.uid) return <Redirect to='/' />
+    // const { auth } = this.props;
+    // if (!auth.uid) return <Redirect to='/' />
     return (
       <div className="new-food-form">
         <form onSubmit={this.handleSubmit} className="white">
@@ -49,4 +50,10 @@ class CreateFood extends Component {
   }
 }
 
-export default CreateFood;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createFood: (food) => dispatch(createFood(food))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CreateFood);
