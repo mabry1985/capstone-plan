@@ -1,7 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react'
 import './profile.css'
 import { fadeIn, fadeOut } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
+import { connect } from 'react-redux';
+import { logOut } from './../actions/authActions';
 
 const FadeIn = styled.div`animation: 1s ease-in ${keyframes`${fadeIn}`}`
 
@@ -13,7 +16,7 @@ export class Profile extends Component {
       selected: false,
     }
   }
-  
+
   handleToggle = () => {
     const wrapper = document.getElementById('options');
     wrapper.classList.toggle('is-profile-open')
@@ -24,7 +27,14 @@ export class Profile extends Component {
         return { selected: true }
       }
     })
-    console.log(this.state)
+  }
+
+  handleLogOut = () => {
+
+  }
+
+  test = () => {
+    console.log("Im working")
   }
   
   
@@ -41,6 +51,7 @@ export class Profile extends Component {
 
     return (
       <div className="profile">
+        <p className="log-out-test" onClick={this.props.logOut}>Log-Out</p>
         <div className="table options" id="options">
           <ul id="list">
             <li className="name">Josh Mabry:</li>
@@ -50,7 +61,7 @@ export class Profile extends Component {
             <li> | </li>
             <li className="profile">Profile </li>
             <li> | </li>
-            <li className="logout">Logout </li>
+            <li onClick={this.test} className="logout">Log Out</li>
           </ul>
         </div>
         <div style={borderStyles} onClick={this.handleToggle} className="profile-button">
@@ -62,4 +73,13 @@ export class Profile extends Component {
   }
 }
 
-export default Profile
+const mapStateToProps = (state) => {
+  return{}
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    logOut: () => dispatch(logOut())
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Profile)

@@ -69,7 +69,7 @@ class EditBeer extends Component {
     // if (!auth.uid) return <Redirect to='/' />
     if (beer) {
       return (
-        <div className="new-beer-form">
+        <div className="edit-beer-form">
           <form onSubmit={this.handleSubmit} className="white">
             <h5 className="">Edit</h5>
             <div className="beer-name-field">

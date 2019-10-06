@@ -64,7 +64,7 @@ class EditFood extends Component {
     // const { auth } = this.props;
     // if (!auth.uid) return <Redirect to='/' />
     return (
-      <div className="new-food-form">
+      <div className="edit-food-form">
         <form onSubmit={this.handleSubmit} className="">
           <h5 className="">New Food</h5>
           <div className="food-name-field">
@@ -78,7 +78,7 @@ class EditFood extends Component {
           </div>
           <div className="food-description-field">
             <label htmlFor="description">Description</label>
-            <textarea name="textarea_field" id="description" className="materialize-textarea" onChange={this.handleChange} placeholder="Description" value={this.state.description}/>
+            <textarea id="description" className="materialize-textarea" onChange={this.handleChange} placeholder="Description" value={this.state.description}/>
           </div>
             <button className="edit-food-button">Edit</button>
           </form>

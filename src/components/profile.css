@@ -41,6 +41,20 @@
   transition: transform 750ms ease-in-out 200ms;
 }
 
+.table-button {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: rgb(235, 229, 187);
+  position: absolute;
+  right: -195px;
+  top: -7px;
+  display: table;
+  margin: 0 auto;
+  z-index: -10;
+  transition: transform 750ms ease-in-out 200ms;
+}
+
 .options.is-profile-open {
   transform: translateX(-440px)
 }
@@ -64,4 +78,9 @@ ul#list {
     display: inline;
     padding-left: 5px;
     padding-top: 5px;
-	}
+  }
+  
+  .log-out-test {
+  margin-left: 50px;
+  color: rgb(235, 229, 187);
+  }
