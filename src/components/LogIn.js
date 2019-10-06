@@ -52,7 +52,7 @@ class LogIn extends Component {
                   </div>
               <button className="log-in-button">Log In</button>
               <div className="log-in-error">
-                { authError ? <p>{authError}</p> : null}
+                { authError ? <p className="error">{authError}</p> : null}
               </div>
                 </form>
             </div>

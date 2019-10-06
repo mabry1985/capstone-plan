@@ -60,3 +60,7 @@ button:focus {
 .a11y {
   visibility: hidden;
 }
+
+.error {
+  color: red;
+}

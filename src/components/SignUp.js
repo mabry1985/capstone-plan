@@ -31,6 +31,7 @@ class SignUp extends Component {
   }
 
   render() {
+    const { authError } = this.props
     return (
       <FadeIn>
         <div>
@@ -72,10 +73,17 @@ class SignUp extends Component {
           
               <br />
                 <button className="sign-up-button">Sign Up</button>
+                { authError ? <p className="error">{ authError }</p> : null }
             </form>
         </div>
       </FadeIn>
     );
+  }
+}
+
+const mapStateToProps = (state) => {
+  return {
+    authError: state.auth.authError,
   }
 }
 
@@ -86,4 +94,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(null, mapDispatchToProps)(SignUp)
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp)
