@@ -25,8 +25,8 @@ class CreateBeer extends Component {
   };
 
   render() {
-    // const { auth } = this.props;
-    // if (!auth.uid) return <Redirect to='/' />
+    const { auth } = this.props;
+    if (!auth.uid) return <Redirect to='/' />
     return (
       <div className="new-beer-form">
         <form onSubmit={this.handleSubmit} className="white">
@@ -64,10 +64,16 @@ class CreateBeer extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth,
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
     createBeer: (beer) => dispatch(createBeer(beer))
   }
 }
 
-export default connect(null, mapDispatchToProps)(CreateBeer);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateBeer);

@@ -23,8 +23,8 @@ class CreateFood extends Component {
   };
 
   render() {
-    // const { auth } = this.props;
-    // if (!auth.uid) return <Redirect to='/' />
+    const { auth } = this.props;
+    if (!auth.uid) return <Redirect to='/' />
     return (
       <div className="new-food-form">
         <form onSubmit={this.handleSubmit} className="">
@@ -50,10 +50,16 @@ class CreateFood extends Component {
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth,
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
     createFood: (food) => dispatch(createFood(food))
   }
 }
 
-export default connect(null, mapDispatchToProps)(CreateFood);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateFood);

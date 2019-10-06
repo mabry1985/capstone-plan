@@ -65,8 +65,8 @@ class EditBeer extends Component {
 
   render() {
     const { beer } = this.props;
-    // const { auth } = this.props;
-    // if (!auth.uid) return <Redirect to='/' />
+    const { auth } = this.props;
+    if (!auth.uid) return <Redirect to='/' />
     if (beer) {
       return (
         <div className="edit-beer-form">
@@ -122,7 +122,8 @@ const mapStateToProps = (state, ownProps) => {
   const beers = state.firestore.data.beers;
   const beer = beers ? beers[id] : null;
   return {
-    beer: beer
+    beer: beer,
+    auth: state.firebase.auth
   }
 }
 

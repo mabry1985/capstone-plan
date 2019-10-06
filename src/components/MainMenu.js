@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import Profile from './Profile';
 import menuButton from '../assets/images/menu-button.png';
 import sellButton from '../assets/images/sell-button.png';
@@ -8,8 +8,11 @@ import chatButton from '../assets/images/chat-button.png';
 import gameButton from '../assets/images/games-button.png';
 import logo from '../assets/images/logo-small.png';
 import './main-menu.css';
+import { connect } from 'react-redux';
 
-const MainMenu = () => {
+const MainMenu = (props) => {
+  const { auth } = props;
+  if (!auth.uid) return <Redirect to='/' />
   return (
     <div className="main-menu-page">
       <Profile/>
@@ -42,4 +45,9 @@ const MainMenu = () => {
   )
 }
 
-export default MainMenu
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth,
+  }
+}
+export default connect(mapStateToProps)(MainMenu)

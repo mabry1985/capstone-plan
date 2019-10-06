@@ -74,7 +74,9 @@ export class Profile extends Component {
 }
 
 const mapStateToProps = (state) => {
-  return{}
+  return{
+    auth: state.firebase.auth
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {

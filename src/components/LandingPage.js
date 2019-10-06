@@ -1,5 +1,4 @@
 import React from 'react';
-import Model from './Model';
 import LogIn from './LogIn.js';
 import SignUp from './SignUp.js';
 import logo from '../assets/images/logo-small.png';
@@ -8,6 +7,8 @@ import tempRoom from '../assets/images/landing-page-bg-room.png';
 import './landing-page.css';
 import { fadeIn } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
+import { connect }  from 'react-redux';
+import { Redirect } from 'react-router-dom'
 
 const FadeIn = styled.div`animation: 1800ms ${keyframes`${fadeIn}`}`
 
@@ -51,6 +52,8 @@ class LandingPage extends React.Component {
 
   render() {
     let content = null;
+    const { auth } = this.props;
+    if (auth.uid) return <Redirect to='/main-menu' />
     // eslint-disable-next-line no-lone-blocks
     {if (!this.state.logIn && !this.state.signUp ) {
       content = <div className='landing-page'>
@@ -88,4 +91,10 @@ class LandingPage extends React.Component {
   }
 }
 
-export default LandingPage
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
+
+export default connect(mapStateToProps)(LandingPage)

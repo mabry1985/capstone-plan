@@ -61,8 +61,8 @@ class EditFood extends Component {
 
 
   render() {
-    // const { auth } = this.props;
-    // if (!auth.uid) return <Redirect to='/' />
+    const { auth } = this.props;
+    if (!auth.uid) return <Redirect to='/' />
     return (
       <div className="edit-food-form">
         <form onSubmit={this.handleSubmit} className="">
@@ -99,7 +99,8 @@ const mapStateToProps = (state, ownProps) => {
   const foods = state.firestore.data.food;
   const food = foods ? foods[id] : null;
   return {
-    food: food
+    auth: state.firebase.auth,
+    food: food,
   }
 }
 

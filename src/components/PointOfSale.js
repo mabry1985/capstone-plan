@@ -4,20 +4,21 @@ import Food from './Food';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import './point-of-sale.css';
+
 
 class PointOfSale extends React.Component {
   render(){
-    const { beer, food } = this.props
+    const { beer, food, auth } = this.props
+    if (!auth.uid) return <Redirect to='/' />
     return (
       <div className="menu">
         <div className="beer-list">
           { beer && beer.map(beer => (
             <div key={beer.id}>
-              {/* {keg.editing ? <EditKeg keg={keg} key={keg.id} /> : */}
                 <Beer key={beer.id} beer={beer} />
-                <Link to={'/edit/' + beer.id}>
+                <Link to={'/edit-beer/' + beer.id}>
                 <p>Edit</p>
                 </Link>
             </div>
@@ -28,6 +29,9 @@ class PointOfSale extends React.Component {
           <div key={food.id}>
             {/* {keg.editing ? <EditKeg keg={keg} key={keg.id} /> : */}
               <Food key={food.id} food={food} />
+              <Link to={'/edit-food/' + food.id}>
+                <p>Edit</p>
+              </Link>
           </div>
         ))}
         </div>
@@ -40,6 +44,7 @@ const mapStateToProps = (state) => {
   return {
     food: state.firestore.ordered.food,
     beer: state.firestore.ordered.beers,
+    auth: state.firebase.auth
   }
 }
 

@@ -1,21 +1,27 @@
 import React from 'react';
-import  { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+
 
 
 const Beer = (props) => {
+  const { beer } = props;
+  const { auth } = props;
+  if (!auth.uid) return <Redirect to='/' />
   return (
-    <div className="menu-items" key={props.beer.id}>
-      <h3>{props.beer.name} - {props.beer.abv}%</h3>
-      <p><em>{props.beer.brewery}</em></p>
-      <p>${props.beer.price}.00</p>
-      <Link to={'/edit-beer/' + props.beer.id} >
-      <button>
-        Edit
-      </button> 
-      </Link>
+    <div className="menu-items" key={beer.id}>
+      <h3>{beer.name} - {beer.abv}%</h3>
+      <p><em>{beer.brewery}</em></p>
+      <p>${beer.price}.00</p>
       <hr />
     </div>
   )
 }
 
-export default Beer
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth,
+  }
+}
+
+export default connect(mapStateToProps)(Beer)
