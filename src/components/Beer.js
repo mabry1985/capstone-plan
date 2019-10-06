@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import  { Link } from 'react-router-dom';
+
 
 const Beer = (props) => {
   return (
@@ -6,15 +8,11 @@ const Beer = (props) => {
       <h3>{props.beer.name} - {props.beer.abv}%</h3>
       <p><em>{props.beer.brewery}</em></p>
       <p>${props.beer.price}.00</p>
-      {/* <p>pints left: {props.beer.pintsLeft}</p>
-      <button
-        onClick={() => dispatch({ type: 'SELL_BEER', id: props.beer.id })}>
-        Sell
-      </button>
-      <button
-        onClick={() => dispatch({ type: 'EDIT_BEER', id: props.beer.id })}>
+      <Link to={'/edit-beer/' + props.beer.id} >
+      <button>
         Edit
-      </button> */}
+      </button> 
+      </Link>
       <hr />
     </div>
   )

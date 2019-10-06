@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const style = {
-  height: 250 // we can control scene size by setting container dimensions
+  height: 800 // we can control scene size by setting container dimensions
 };
 
 export class Model extends Component {
@@ -56,6 +57,12 @@ export class Model extends Component {
     });
     this.cube = new THREE.Mesh(geometry, material);
     this.scene.add(this.cube);
+    const loader = new GLTFLoader();
+    loader.load('./holeinthewall.gltf', gltf => {
+
+      this.scene.add(gltf.scene);
+
+    });
 
     const lights = [];
     lights[0] = new THREE.PointLight(0xffffff, 1, 0);
@@ -101,3 +108,4 @@ export class Model extends Component {
 }
 
 export default Model
+

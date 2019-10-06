@@ -5,6 +5,8 @@ import MainMenu from './components/MainMenu.js';
 import Model from './components/Model.js';
 import PointOfSale from './components/PointOfSale.js';
 import NewMenuItems from './components/NewMenuItems.js';
+import EditBeer from './components/EditBeer'
+import EditFood from './components/EditFood'
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path='/model' component={Model} />
           <Route path='/menu' component={PointOfSale} />
           <Route path='/new' component={NewMenuItems} />
+          <Route path='/edit-beer/:id' component={EditBeer} />
+          <Route path='/edit-food/:id' component={EditFood} />
       </Switch>
     </div>
   );

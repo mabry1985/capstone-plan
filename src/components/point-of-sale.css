@@ -1,0 +1,20 @@
+.menu {
+
+  display: block;
+
+}
+
+.beer-list, .food-list {
+  color: #FCF6CA;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  margin: 10px;
+}
+
+.beer-list {
+
+}
+
+.food-list {
+}

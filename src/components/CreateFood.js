@@ -27,19 +27,19 @@ class CreateFood extends Component {
     // if (!auth.uid) return <Redirect to='/' />
     return (
       <div className="new-food-form">
-        <form onSubmit={this.handleSubmit} className="white">
+        <form onSubmit={this.handleSubmit} className="">
           <h5 className="">New Food</h5>
           <div className="food-name-field">
             <label htmlFor="name">Name</label>
-            <input type="text" id="name" onChange={this.handleChange} />
+            <input type="text" id="name" onChange={this.handleChange} placeholder="Name"/>
           </div>
           <div className="food-price-field">
             <label htmlFor="price">Price</label>
-            <input id="price" className="materialize-textarea" onChange={this.handleChange} />
+            <input id="price" className="" onChange={this.handleChange} placeholder="Price" />
           </div>
           <div className="food-description-field">
             <label htmlFor="description">Description</label>
-            <textarea id="description" className="materialize-textarea" onChange={this.handleChange} />
+            <textarea id="description" className="materialize-textarea" onChange={this.handleChange} placeholder="Description"/>
           </div>
           <div className="input-field">
             <button className="btn pink lighten-1 z-depth-0">Submit</button>

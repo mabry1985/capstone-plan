@@ -32,31 +32,31 @@ class CreateBeer extends Component {
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className="">New Beer</h5>
           <div className="beer-name-field">
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" onChange={this.handleChange} />
+            <label className="a11y" htmlFor="name">Name</label>
+            <input type="text" id="name" onChange={this.handleChange} placeholder="Name"/>
           </div>
           <div className="beer-price-field">
-            <label htmlFor="price">Price</label>
-            <input id="price" className="" onChange={this.handleChange} />
+            <label className="a11y" htmlFor="price">Price</label>
+            <input id="price" className="" onChange={this.handleChange} placeholder="Price"/>
           </div>
           <div className="beer-brewery-field">
-            <label htmlFor="brewery">Brewery</label>
-            <input id="brewery" className="" onChange={this.handleChange} />
+            <label className="a11y" htmlFor="brewery">Brewery</label>
+            <input id="brewery" className="" onChange={this.handleChange} placeholder="Brewery" />
           </div>
           <div className="beer-from-field">
-            <label htmlFor="from">From</label>
-            <input id="from" className="" onChange={this.handleChange} />
+            <label className="a11y" htmlFor="from">From</label>
+            <input id="from" className="" onChange={this.handleChange} placeholder="From"/>
           </div>
           <div className="beer-style-field">
-            <label htmlFor="style">Style</label>
-            <input id="style" className="" onChange={this.handleChange} />
+            <label className="a11y" htmlFor="style">Style</label>
+            <input id="style" className="" onChange={this.handleChange} placeholder="Style"/>
           </div>
           <div className="beer-abv-field">
-            <label htmlFor="abv">ABV</label>
-            <input id="abv" className="" onChange={this.handleChange} />
+            <label className="a11y" htmlFor="abv">ABV</label>
+            <input id="abv" className="" onChange={this.handleChange} placeholder="ABV"/>
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">Submit</button>
+            <button className="">Submit</button>
           </div>
         </form>
       </div>

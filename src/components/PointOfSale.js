@@ -4,6 +4,8 @@ import Food from './Food';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import { Link } from 'react-router-dom';
+import './point-of-sale.css';
 
 class PointOfSale extends React.Component {
   render(){
@@ -15,6 +17,9 @@ class PointOfSale extends React.Component {
             <div key={beer.id}>
               {/* {keg.editing ? <EditKeg keg={keg} key={keg.id} /> : */}
                 <Beer key={beer.id} beer={beer} />
+                <Link to={'/edit/' + beer.id}>
+                <p>Edit</p>
+                </Link>
             </div>
           ))}
         </div>
