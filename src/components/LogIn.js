@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../assets/images/logo-small.png';
 import './log-in.css';
-import { Link } from 'react-router-dom';
 import { fadeIn } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
 import { logIn } from './../actions/authActions';

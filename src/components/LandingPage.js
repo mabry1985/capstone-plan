@@ -10,7 +10,7 @@ import styled, { keyframes } from 'styled-components';
 import { connect }  from 'react-redux';
 import { Redirect } from 'react-router-dom'
 
-const FadeIn = styled.div`animation: 1800ms ${keyframes`${fadeIn}`}`
+const FadeIn = styled.div`animation: 2500ms ${keyframes`${fadeIn}`}`
 
 
 class LandingPage extends React.Component {
@@ -56,7 +56,9 @@ class LandingPage extends React.Component {
     if (auth.uid) return <Redirect to='/main-menu' />
     // eslint-disable-next-line no-lone-blocks
     {if (!this.state.logIn && !this.state.signUp ) {
-      content = <div className='landing-page'>
+      content = 
+       <FadeIn>
+       <div className='landing-page'>
         <div className="landing-page-btns">
           <button
             className="log-in"
@@ -72,6 +74,7 @@ class LandingPage extends React.Component {
         </div>
         <img className="logo-landing-page" src={logo} alt="logo" />
         </div>
+      </FadeIn>
     }}
     return (
       <main>
@@ -82,8 +85,9 @@ class LandingPage extends React.Component {
           alt="background layer" />
         {this.state.logIn ? <LogIn onClickLogIn={this.handleClickLogIn}/> : null}
         {this.state.signUp ? <SignUp onClickSignUp={this.handleClickSignUp}/> : null}
-        {content}
-            {/* <img src={logo} alt="logo shadow" /> */}
+        <FadeIn>
+          {content}
+        </FadeIn>
           <img className="temp-room" src={tempRoom} alt=""/>
 
       </main>
