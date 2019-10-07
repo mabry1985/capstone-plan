@@ -56,7 +56,8 @@
 }
 
 .options.is-profile-open {
-  transform: translateX(-440px)
+  transform: translateX(-440px);
+  animation-fill-mode: forwards;
 }
 
 .profile-mask {

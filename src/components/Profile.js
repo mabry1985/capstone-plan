@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react'
 import './profile.css'
-import { fadeIn, fadeOut } from 'react-animations';
+import { fadeIn } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
 import { connect } from 'react-redux';
 import { logOut } from './../actions/authActions';

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { createFood } from './../actions/menuActions.js';
 import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
 
 class CreateFood extends Component {
   state = {
@@ -23,8 +22,6 @@ class CreateFood extends Component {
   };
 
   render() {
-    const { auth } = this.props;
-    if (!auth.uid) return <Redirect to='/' />
     return (
       <div className="new-food-form">
         <form onSubmit={this.handleSubmit} className="">
@@ -52,7 +49,6 @@ class CreateFood extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    auth: state.firebase.auth,
   }
 }
 

@@ -40,13 +40,40 @@ export const createBeer = (beer) => {
 export const editBeer = (beer) => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     const firestore = getFirestore();
-    console.log(beer)
     firestore.collection('beers').doc(beer.id).set({
       ...beer,
     }).then(() => {
       dispatch({ type: 'EDIT_BEER', beer })
     }).catch((err) => {
       dispatch({ type: 'EDIT_BEER_ERROR', err })
+    })
+  }
+}
+
+export const buyBeer = (beer) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firestore = getFirestore();
+    firestore.collection('beers').doc(beer.id).set({
+      ...beer,
+      inCart: true,
+    }).then(() => {
+      dispatch({ type: 'BUY_BEER', beer })
+    }).catch((err) => {
+      dispatch({ type: 'BUY_BEER_ERROR', err })
+    })
+  }
+}
+
+export const buyFood = (food) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
+    const firestore = getFirestore();
+    firestore.collection('foods').doc(food.id).set({
+      ...food,
+      inCart: true,
+    }).then(() => {
+      dispatch({ type: 'BUY_FOOD', food })
+    }).catch((err) => {
+      dispatch({ type: 'BUY_FOOD_ERROR', err })
     })
   }
 }

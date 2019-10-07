@@ -8,7 +8,8 @@ import NewMenuItems from './components/NewMenuItems.js';
 import EditBeer from './components/EditBeer'
 import EditFood from './components/EditFood'
 
-function App() {
+function App(props) {
+  const { profile } = props
   return (
     <div className="App">
       <Switch>
