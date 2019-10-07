@@ -48,14 +48,14 @@ export class Profile extends Component {
     }else {
       borderStyles = {};
     }
-
+    const{ profile } = this.props;
     return (
       <div className="profile">
         <p className="log-out-test" onClick={this.props.logOut}>Log-Out</p>
         <div className="table options" id="options">
           <ul id="list">
-            <li className="name">Josh Mabry:</li>
-            <li className="balance">$100.00 </li>
+            <li className="name">{profile.firstName} {profile.lastName} :</li>
+            <li className="balance">${profile.balance}.00 </li>
             <li> | </li>
             <li className="add-funds">Add Funds </li>
             <li> | </li>
@@ -65,7 +65,7 @@ export class Profile extends Component {
           </ul>
         </div>
         <div style={borderStyles} onClick={this.handleToggle} className="profile-button">
-          <h4 className="initials">JM</h4>
+          <h4 className="initials">{profile.initials}</h4>
         </div>
         <div className="profile-mask"></div>
       </div>
@@ -75,7 +75,8 @@ export class Profile extends Component {
 
 const mapStateToProps = (state) => {
   return{
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    profile: state.firebase.profile,
   }
 }
 

@@ -15,7 +15,7 @@ const MainMenu = (props) => {
   if (!auth.uid) return <Redirect to='/' />
   return (
     <div className="main-menu-page">
-      <Profile/>
+      <Profile />
       <div className= "main-menu-buttons-div">
           <Link to='/menu'>
             <img className="main-menu-buttons sell-button" src={menuButton} alt="menu button"/> 

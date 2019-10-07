@@ -36,6 +36,9 @@ export const signUp = (newUser) => {
         firstName: newUser.firstName,
         lastName: newUser.lastName,
         initials: newUser.firstName[0] + newUser.lastName[0],
+        admin: false,
+        balance: 0,
+        purchaseHistory: [],
       })
     }).then(() => {
       dispatch({ type: 'SIGNUP_SUCCESS' })
