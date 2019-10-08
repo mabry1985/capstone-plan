@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import Beer from './Beer';
 import Food from './Food';
@@ -7,7 +8,7 @@ import { addToCart } from './../actions/menuActions';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import './point-of-sale.css';
 
 
@@ -20,31 +21,36 @@ class PointOfSale extends React.Component {
       <div className="menu">
 
       <Profile/>
-      
-        <div className="beer-list">
-          { beer && beer.map(beer => (
-            <div key={beer.id}>
-                <Beer key={beer.id} beer={beer} />
-               {profile.admin ? <Link to={'/edit-beer/' + beer.id}>
-                <p>Edit</p>
-              </Link> : null }
-              <a onClick={() => this.props.addToCart(beer)}>Buy</a>
-            </div>
-          ))}
-        </div>
-       
-        <div className="food-list">
-        { food && food.map(food => (
-          <div key={food.id}>
-              <Food key={food.id} food={food} />
-            {profile.admin ? 
-              <Link to={'/edit-food/' + food.id}>
-                <p> Edit</p>
-              </Link> : null }
-            <a onClick={() => this.props.addToCart(food)}>Buy</a>
+        <div class="row" id="menu-container">
+          
+          <div className="col-md-3 beer-list">
+            <table border='0' cellspacing="15px" className="menu-table">
+                <tbody className="menu-tbody">
+                { beer && beer.map(beer => (
+                  <div key={beer.id}>
+                    <Beer key={beer.id} beer={beer} profile={profile} />
+                    <a onClick={() => this.props.addToCart(beer)}>Buy</a>
+                  </div>
+                ))}
+                </tbody>
+            </table>
           </div>
-        ))}
-        <Cart/>
+
+          <div className="col-md-3 food-list">
+            <table border='0' id="menu-table-food">
+              <tbody className="menu-tbody">
+                { food && food.map(food => (
+                  <div key={food.id}>
+                    <Food key={food.id} food={food} profile={profile} />
+                    <a onClick={() => this.props.addToCart(food)}>Buy</a>
+                  </div>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <tbody className="menu-tbody">
+          <Cart/>
+          </tbody>
         </div>
       </div>
     );

@@ -6,12 +6,11 @@ export class Cart extends Component {
 
   total() {
     return this.props.items.reduce((total, item) => {
-      return total + item.price
+      return total + parseInt(item.price)
     }, 0)
   }
 
   render() {
-    console.log(this.props.items)
     const header =  
       <div>
         <h1 style={{ color : 'white' }}>Cart</h1>
@@ -24,10 +23,10 @@ export class Cart extends Component {
       </div>
     }
     return (
-      <div id="cart">
+      <div id="cart" className="col-md-3">
         {header}
-      <table border='0'>
-        <tbody>
+      <table border='0' className="menu-table">
+        <tbody id="cart-tbody">
           {this.props.items.map((item, index) => {
             return <tr key={index}>
               <td>

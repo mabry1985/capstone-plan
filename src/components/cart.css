@@ -1,24 +1,15 @@
-.menu {
-  display: block;
-}
-
-#menu-container {
-  color: #FCF6CA;
+#cart {
+    color: #FCF6CA;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: bold;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 40px 100px 40px;
   margin: 10px;
-}
-
-.beer-list, .food-list {
   grid-column: span 4;
-
 }
 
-
-.menu-tbody {
-  width: 330px;
+#cart-tbody {
+    width: 330px;
   display: table;
 }
