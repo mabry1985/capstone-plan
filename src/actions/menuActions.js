@@ -52,31 +52,12 @@ export const editBeer = (beer) => {
 
 export const addToCart = (item) => {
   return (dispatch, getState) => {
-    console.log(getState())
-      const { cart }= getState().menu.cart
-
-      dispatch({ type: 'ADD_TO_CART', item, ...cart})
+      dispatch({ type: 'ADD_TO_CART', item})
     }
 }
 
-export const removeFromCart = (item) => {
-  return (dispatch, getState, { getFirebase, getFirestore }) => {
-    // const firestore = getFirestore();
-    // }).then(() => {
-    //   dispatch({ type: 'BUY_BEER', beer })
-    // }).catch((err) => {
-    //   dispatch({ type: 'BUY_BEER_ERROR', err })
-    // })
+export const removeFromCart = (index) => {
+    return (dispatch, getState) => {
+      dispatch({ type: 'REMOVE_FROM_CART', index })
   }
 }
-
-// addToCart = (item) => {
-//   const cart = [...this.state.cart, item];
-//   this.setState({ cart });
-// }
-
-// removeFromCart(index) {
-//   const cart = [...this.state.cart];
-//   cart.splice(index, 1);
-//   this.setState({ cart });
-// }

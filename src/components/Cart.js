@@ -11,7 +11,7 @@ export class Cart extends Component {
   }
 
   render() {
-    console.log(this.props)
+    console.log(this.props.items)
     const header =  
       <div>
         <h1 style={{ color : 'white' }}>Cart</h1>
@@ -31,9 +31,10 @@ export class Cart extends Component {
           {this.props.items.map((item, index) => {
             return <tr key={index}>
               <td>
-                <button onClick={() =>this.props.removeFromCart(index)}>
+                  <p onClick={() => this.props.removeFromCart(index)}
+                     style={{ color: 'white' }}>
                     X
-                </button>
+                  </p>
               </td>
               <td>{item.name}</td>
               <td>{item.price}</td>
@@ -48,7 +49,6 @@ export class Cart extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state)
   return {
     items: state.menu.cart,
   }
@@ -56,7 +56,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    removeFromCart: (item) => dispatch(removeFromCart(item)),
+    removeFromCart: (index) => dispatch(removeFromCart(index)),
   }
 }
 

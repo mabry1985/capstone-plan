@@ -21,21 +21,20 @@ const menuReducer = (state = initState, action) => {
       console.log('create beer error', action.err);
       return state;
 
-    case 'BUY_BEER':
-      console.log('bought beer', action);
-      return state;
-
-    case 'BUY_BEER_ERROR':
-      console.log('buy beer error', action.err)
-      return state;
-
     case 'ADD_TO_CART': {
-      console.log('added to cart', action)
-      return state;
+      const cart = [...state.cart, action.item]
+      return {
+        ...state,
+        cart,
+      }
     }
     case 'REMOVE_FROM_CART': {
-      console.log('removed from cart', action)
-      return state;
+      const cart = [...state.cart]
+      cart.splice(action.index, 1)
+      return {
+        ...state,
+        cart,
+      }
     }
     default: 
     return state;
