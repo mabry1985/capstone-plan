@@ -51,14 +51,12 @@ export const editBeer = (beer) => {
 }
 
 export const addToCart = (item) => {
-  return (dispatch, getState, { getFirebase, getFirestore }) => {
-    // const firestore = getFirestore();
-    // }).then(() => {
-    //   dispatch({ type: 'BUY_BEER', beer })
-    // }).catch((err) => {
-    //   dispatch({ type: 'BUY_BEER_ERROR', err })
-    // })
-  }
+  return (dispatch, getState) => {
+    console.log(getState())
+      const { cart }= getState().menu.cart
+
+      dispatch({ type: 'ADD_TO_CART', item, ...cart})
+    }
 }
 
 export const removeFromCart = (item) => {
@@ -71,3 +69,14 @@ export const removeFromCart = (item) => {
     // })
   }
 }
+
+// addToCart = (item) => {
+//   const cart = [...this.state.cart, item];
+//   this.setState({ cart });
+// }
+
+// removeFromCart(index) {
+//   const cart = [...this.state.cart];
+//   cart.splice(index, 1);
+//   this.setState({ cart });
+// }

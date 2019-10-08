@@ -30,9 +30,11 @@ const menuReducer = (state = initState, action) => {
       return state;
 
     case 'ADD_TO_CART': {
+      console.log('added to cart', action)
       return state;
     }
     case 'REMOVE_FROM_CART': {
+      console.log('removed from cart', action)
       return state;
     }
     default: 

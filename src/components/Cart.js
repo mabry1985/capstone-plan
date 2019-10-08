@@ -11,6 +11,7 @@ export class Cart extends Component {
   }
 
   render() {
+    console.log(this.props)
     const header =  
       <div>
         <h1 style={{ color : 'white' }}>Cart</h1>
@@ -24,6 +25,7 @@ export class Cart extends Component {
     }
     return (
       <div id="cart">
+        {header}
       <table border='0'>
         <tbody>
           {this.props.items.map((item, index) => {
@@ -46,8 +48,9 @@ export class Cart extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
-    cart: state.cart,
+    items: state.menu.cart,
   }
 }
 

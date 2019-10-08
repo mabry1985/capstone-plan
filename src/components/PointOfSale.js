@@ -44,7 +44,7 @@ class PointOfSale extends React.Component {
             <a onClick={() => this.props.addToCart(food)}>Buy</a>
           </div>
         ))}
-        <Cart items={this.state.cart} removeFromCart={this.removeFromCart}/>
+        <Cart/>
         </div>
       </div>
     );
