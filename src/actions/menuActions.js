@@ -50,30 +50,24 @@ export const editBeer = (beer) => {
   }
 }
 
-export const buyBeer = (beer) => {
+export const addToCart = (item) => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
-    const firestore = getFirestore();
-    firestore.collection('beers').doc(beer.id).set({
-      ...beer,
-      inCart: true,
-    }).then(() => {
-      dispatch({ type: 'BUY_BEER', beer })
-    }).catch((err) => {
-      dispatch({ type: 'BUY_BEER_ERROR', err })
-    })
+    // const firestore = getFirestore();
+    // }).then(() => {
+    //   dispatch({ type: 'BUY_BEER', beer })
+    // }).catch((err) => {
+    //   dispatch({ type: 'BUY_BEER_ERROR', err })
+    // })
   }
 }
 
-export const buyFood = (food) => {
+export const removeFromCart = (item) => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
-    const firestore = getFirestore();
-    firestore.collection('foods').doc(food.id).set({
-      ...food,
-      inCart: true,
-    }).then(() => {
-      dispatch({ type: 'BUY_FOOD', food })
-    }).catch((err) => {
-      dispatch({ type: 'BUY_FOOD_ERROR', err })
-    })
+    // const firestore = getFirestore();
+    // }).then(() => {
+    //   dispatch({ type: 'BUY_BEER', beer })
+    // }).catch((err) => {
+    //   dispatch({ type: 'BUY_BEER_ERROR', err })
+    // })
   }
 }

@@ -1,4 +1,6 @@
-const initState = {}
+const initState = {
+  cart: [],
+}
 
 
 const menuReducer = (state = initState, action) => {
@@ -27,14 +29,12 @@ const menuReducer = (state = initState, action) => {
       console.log('buy beer error', action.err)
       return state;
 
-    case 'BUY_FOOD':
-      console.log('bought food', action);
+    case 'ADD_TO_CART': {
       return state;
-
-    case 'BUY_FOOD_ERROR':
-      console.log('buy food error', action.err)
+    }
+    case 'REMOVE_FROM_CART': {
       return state;
-
+    }
     default: 
     return state;
   }
