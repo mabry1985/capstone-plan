@@ -57,10 +57,10 @@ export class Profile extends Component {
             <li className="name">{profile.firstName} {profile.lastName} :</li>
             <li className="balance">${profile.balance}.00 </li>
             <li> | </li>
-            <li className="add-funds">Add Funds </li>
+            {/* <li className="add-funds">Add Funds </li>
             <li> | </li>
             <li className="profile">Profile </li>
-            <li> | </li>
+            <li> | </li> */}
             <li onClick={this.test} className="logout">Log Out</li>
           </ul>
         </div>
