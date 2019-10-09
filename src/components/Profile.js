@@ -61,7 +61,7 @@ export class Profile extends Component {
             <li> | </li>
             <li className="profile">Profile </li>
             <li> | </li> */}
-            <li onClick={this.test} className="logout">Log Out</li>
+            <li onClick={this.props.logOut} className="logout">Log Out</li>
           </ul>
         </div>
         <div style={borderStyles} onClick={this.handleToggle} className="profile-button">

@@ -34,7 +34,7 @@
     font-weight: bold;
     color: rgb(235, 229, 187);
     position: absolute;
-    right: -602px;
+    right: -629px;
     top: 2px;
     display: table;
     margin: 0 auto;
@@ -43,7 +43,7 @@
 }
 
 .options.is-profile-open {
-  transform: translateX(-260px);
+  transform: translateX(-280px);
   animation-fill-mode: forwards;
 }
 
