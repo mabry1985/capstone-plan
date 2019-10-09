@@ -14,11 +14,12 @@
 
 .beer-list, .food-list {
   grid-column: span 4;
-
+  
 }
 
 
 .menu-tbody {
+  border: 1px solid oldlace;
   width: 330px;
   display: table;
 }

@@ -21,9 +21,13 @@ class LandingPage extends React.Component {
     this.state = {
       logIn: false,
       signUp: false,
+      showModal: false
     }
   }
-
+  
+  componentDidMount = () => {
+    this.setState({showModal: true})
+  }
 
   handleClickLogIn = (state) => {
     const wrapper = document.getElementById('wrapper');
@@ -51,6 +55,10 @@ class LandingPage extends React.Component {
     console.log(this.state)
   }
 
+  handleModalToggle = () => {
+    this.setState({showModal: false})
+  }
+  
   render() {
     let content = null;
     const { auth } = this.props;
@@ -77,10 +85,15 @@ class LandingPage extends React.Component {
         </div>
       </FadeIn>
     }}
-    return (
 
+    let modal = null;
+    if (this.state.showModal) {
+      modal = <FullscreenModal onModalToggle={this.handleModalToggle} />
+    } 
+
+    return (
       <main>
-        <FullscreenModal/>
+        {modal}
         <img
           id="wrapper"
           className= "wrapper landing-bg-layer" 

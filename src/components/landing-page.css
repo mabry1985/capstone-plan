@@ -9,7 +9,8 @@
   top: 593px;
   left: 194px;
   width: 326px;
-  z-index: 10;
+  z-index: -1;
+  filter: drop-shadow(2px 2px 4px black);
 }
 
 .logo-landing-page-shadow {

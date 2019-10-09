@@ -1,0 +1,39 @@
+#fullscreen-modal {
+  background-color: #f0f3f3;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  border-radius: 5px;
+  color: black;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  left: 35%;
+  top: 25%;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#fullscreen-message {
+  text-align: center;
+}
+
+.fullscreen-button-container {
+text-align: center;
+margin-top: 80px;
+}
+
+.fullscreen-modal-button {
+  margin: auto;
+  margin-top: 10px;
+  color: cornflowerblue;
+  width: 190px;
+  text-decoration: underline;
+}
+
+
+.fullscreen-modal-button:hover {
+  cursor: pointer;
+
+}

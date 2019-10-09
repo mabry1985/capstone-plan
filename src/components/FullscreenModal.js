@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './fullscreen-modal.css'
 
 export class FullscreenModal extends Component {
 
@@ -21,13 +22,18 @@ export class FullscreenModal extends Component {
         document.webkitCancelFullScreen();
       }
     }
+    this.props.onModalToggle()
   }
+
   
   render() {
     return (
-      <div>
-        <input type="button" value="click to go fullscreen" onClick={this.toggleFullScreen} />
-
+      <div id="fullscreen-modal">
+        <p id="fullscreen-message">This app was designed to be a native app for a tablet and is best viewed in fullscreen mode</p>
+        <div className="fullscreen-button-container">
+          <a onClick={this.toggleFullScreen}> <p className="fullscreen-modal-button" >Go Fullscreen</p></a>
+          <a  onClick={this.props.onModalToggle}><p className="fullscreen-modal-button">I'm Already Fullscreen</p></a>
+        </div>
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { removeFromCart, checkout } from './../actions/menuActions'
+import './cart.css'
 
 export class Cart extends Component {
 
