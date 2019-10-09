@@ -9,6 +9,7 @@ import { fadeIn } from 'react-animations';
 import styled, { keyframes } from 'styled-components';
 import { connect }  from 'react-redux';
 import { Redirect } from 'react-router-dom'
+import FullscreenModal from './FullscreenModal.js';
 
 const FadeIn = styled.div`animation: 2500ms ${keyframes`${fadeIn}`}`
 
@@ -77,7 +78,9 @@ class LandingPage extends React.Component {
       </FadeIn>
     }}
     return (
+
       <main>
+        <FullscreenModal/>
         <img
           id="wrapper"
           className= "wrapper landing-bg-layer" 
