@@ -37,8 +37,12 @@ const menuReducer = (state = initState, action) => {
       }
     }
     case 'CHECKOUT': {
-      const user = [...state.profile]
-      
+      let cart = [...state.cart]
+      cart=[]
+      return {
+        ...state,
+        cart,
+      }
     }
     default: 
     return state;
