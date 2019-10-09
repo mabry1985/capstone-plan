@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { removeFromCart } from './../actions/menuActions'
+import { removeFromCart, checkout } from './../actions/menuActions'
 
 export class Cart extends Component {
 
@@ -10,7 +10,12 @@ export class Cart extends Component {
     }, 0)
   }
 
+  handleCheckout = (user, auth, total) => {
+    this.props.checkout(user, auth, total)
+  }
+
   render() {
+    const { profile, auth } = this.props; 
     const header =  
       <div>
         <h1 style={{ color : 'white' }}>Cart</h1>
@@ -42,6 +47,7 @@ export class Cart extends Component {
         </tbody>
       </table>
       <p>Total: ${this.total()}</p>
+      <button className="checkout" onClick={() => this.handleCheckout(profile, auth, this.total())}>Checkout</button>
       </div>
     )
   }
@@ -50,12 +56,14 @@ export class Cart extends Component {
 const mapStateToProps = (state) => {
   return {
     items: state.menu.cart,
+    auth: state.firebase.auth,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     removeFromCart: (index) => dispatch(removeFromCart(index)),
+    checkout: (profile, auth, total) => dispatch(checkout(profile, auth, total))
   }
 }
 

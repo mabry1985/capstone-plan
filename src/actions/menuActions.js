@@ -61,3 +61,26 @@ export const removeFromCart = (index) => {
       dispatch({ type: 'REMOVE_FROM_CART', index })
   }
 }
+
+export const checkout = (user, auth, total) => {
+  return (dispatch, getState, { getFirestore }) => {
+    console.log(user, auth, total)
+    let err = null
+    if (user.balance >= total) {
+      user = {
+        ...user,
+        balance: user.balance - total,
+      }
+    } else {
+      err = "Balance too low, consider selling some data"
+    }
+    const firestore = getFirestore();
+    firestore.collection('users').doc(auth.uid).set({
+      ...user
+    }).then(() => { 
+      dispatch({ type: 'CHECKOUT', user, total})
+    }).catch((err) => {
+      dispatch({ type: 'CHECKOUT_ERROR', err})
+    })
+  }
+}

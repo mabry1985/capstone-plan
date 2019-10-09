@@ -16,6 +16,7 @@ class PointOfSale extends React.Component {
 
   render(){
     const { beer, food, auth, profile } = this.props
+    console.log(auth);
     if (!auth.uid) return <Redirect to='/' />
     return (
       <div className="menu">
@@ -49,7 +50,7 @@ class PointOfSale extends React.Component {
             </table>
           </div>
           <tbody className="menu-tbody">
-          <Cart/>
+          <Cart profile={profile}/>
           </tbody>
         </div>
       </div>
