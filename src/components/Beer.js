@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './beer.css';
 
 const Beer = (props) => {
   const { beer, profile } = props;
   return (
-    <div className="menu-items" key={beer.id}>
-      <h3 onClick={() => props.addToCart(beer)} className="beer-name">{beer.name}</h3>
+    <div className="beer-menu-items" key={beer.id}>
+      <td onClick={() => props.addToCart(beer)} className="beer-name">{beer.name}</td>
       {profile.admin ?
-          <Link to={'/edit-beer/' + beer.id}>
-            <p className="edit-beer-button">Edit</p>
-          </Link> : null}
-      <p className="beer-price">${beer.price}</p>
+        <Link to={'/edit-beer/' + beer.id}>
+          <td className="edit-beer-button">Edit</td>
+        </Link> : null
+      }
+      <td className="beer-price">${beer.price}</td>
     </div>
   )
 }
 
 export default Beer
+

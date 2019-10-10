@@ -1,0 +1,18 @@
+.edit-food-form {
+  z-index: 10000;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 300px;
+  margin: auto;
+}
+
+.food-name-field {
+  position: relative;
+  right: 19px;
+}
+
+.food-price-field {
+  position: relative;
+  right: 16px;
+}

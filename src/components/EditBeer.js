@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { compose } from 'redux';
 import { getFirestore } from 'redux-firestore';
-import { firestoreConnect } from 'react-redux-firebase'
+import { firestoreConnect } from 'react-redux-firebase';
+import './edit-beer.css';
 
 class EditBeer extends Component {
   constructor(props) {
@@ -51,6 +52,7 @@ class EditBeer extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.editBeer(this.state)
+    this.props.history.push("/menu")
   };
   
   delete = () => {
@@ -71,7 +73,6 @@ class EditBeer extends Component {
       return (
         <div className="edit-beer-form">
           <form onSubmit={this.handleSubmit} className="white">
-            <h5 className="">Edit</h5>
             <div className="beer-name-field">
               <label className="a11y" htmlFor="name">Name</label>
               <input type="text" id="name" onChange={this.handleChange} placeholder="Name" value={this.state.name} />

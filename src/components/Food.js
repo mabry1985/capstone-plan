@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './food.css';
 
 const Food = (props) => {
   const { food, profile } = props;
   return (
-    <div className="menu-items" key={food.id}>
-      <h3 onClick={() => props.addToCart(food)} className="food-name">{food.name}</h3>
+    <div className="food-menu-items" key={food.id}>
+      <td onClick={() => props.addToCart(food)} className="food-name">{food.name}</td>
           {profile.admin ?
             <Link to={'/edit-food/' + food.id}>
-              <p className="edit-food-button">Edit</p>
+              <td className="edit-food-button">Edit</td>
             </Link> : null}
-        <p className="food-price">${food.price}</p>
+        <td className="food-price">${food.price}</td>
       </div> 
   )
 }

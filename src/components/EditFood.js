@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom'
 import { getFirestore } from 'redux-firestore';
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
+import "./edit-food.css"
 
 class EditFood extends Component {
   constructor(props) {
@@ -56,6 +57,7 @@ class EditFood extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.editFood(this.state)
+    this.props.history.push("/menu")
 
   };
 
@@ -66,7 +68,6 @@ class EditFood extends Component {
     return (
       <div className="edit-food-form">
         <form onSubmit={this.handleSubmit} className="">
-          <h5 className="">New Food</h5>
           <div className="food-name-field">
             <label htmlFor="name">Name</label>
             <input type="text" id="name" onChange={this.handleChange} placeholder="Name" value={this.state.name} />
@@ -77,8 +78,8 @@ class EditFood extends Component {
             value={this.state.price}/>
           </div>
           <div className="food-description-field">
-            <label htmlFor="description">Description</label>
-            <textarea id="description" className="materialize-textarea" onChange={this.handleChange} placeholder="Description" value={this.state.description}/>
+            {/* <label htmlFor="description">Description</label>
+            <textarea id="description" className="materialize-textarea" onChange={this.handleChange} placeholder="Description" value={this.state.description}/> */}
           </div>
             <button className="edit-food-button">Edit</button>
           </form>

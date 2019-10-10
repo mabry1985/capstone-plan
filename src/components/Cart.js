@@ -25,26 +25,24 @@ export class Cart extends Component {
     if (this.props.items.length === 0) {
       return <div id="cart">
         { header }
-        <p>Select an item to add to cart.</p>
+        <p className="cart-container">Select an item to add to cart.</p>
       </div>
     }
     return (
-      <div id="cart" className="col-md-3">
+      <div id="cart" className="">
         {header}
         <div className="cart-container">
           {this.props.items.map((item, index) => {
-            return <div key={index}>
-                  <p onClick={() => this.props.removeFromCart(index)}
-                     style={{ color: 'white' }}>
-                    X
-                  </p>
-              <p>{item.name}</p>
-              <p>{item.price}</p>
+            return ( 
+             <div key={index}>
+              {/* <td>{item.price}</td> */}
+              <p id="cart-items" onClick={() => this.props.removeFromCart(index)}>{item.name}</p>
             </div>
+            )
           })}
           </div>
       <p>Total: ${this.total()}</p>
-      <button className="checkout" onClick={() => this.handleCheckout(profile, auth, this.total())}>Checkout</button>
+      <button id="checkout" onClick={() => this.handleCheckout(profile, auth, this.total())}>Checkout</button>
       </div>
     )
   }

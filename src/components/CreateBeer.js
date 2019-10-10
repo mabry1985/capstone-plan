@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { createBeer } from './../actions/menuActions.js';
 import { connect } from 'react-redux';
+import './create-beer.css';
 
 class CreateBeer extends Component {
   state = {
@@ -25,30 +26,30 @@ class CreateBeer extends Component {
 
   render() {
     return (
-      <div className="new-beer-form">
+      <div className="create-beer-form">
         <form onSubmit={this.handleSubmit} className="white">
-          <h5 className="">New Beer</h5>
-          <div className="beer-name-field">
+          <h5 className="">Beer</h5>
+          <div className="create-beer-name-field">
             <label className="a11y" htmlFor="name">Name</label>
             <input type="text" id="name" onChange={this.handleChange} placeholder="Name"/>
           </div>
-          <div className="beer-price-field">
+          <div className="create-beer-price-field">
             <label className="a11y" htmlFor="price">Price</label>
             <input id="price" className="" onChange={this.handleChange} placeholder="Price"/>
           </div>
-          <div className="beer-brewery-field">
+          <div className="create-beer-brewery-field">
             <label className="a11y" htmlFor="brewery">Brewery</label>
             <input id="brewery" className="" onChange={this.handleChange} placeholder="Brewery" />
           </div>
-          <div className="beer-from-field">
+          <div className="create-beer-from-field">
             <label className="a11y" htmlFor="from">From</label>
             <input id="from" className="" onChange={this.handleChange} placeholder="From"/>
           </div>
-          <div className="beer-style-field">
+          <div className="create-beer-style-field">
             <label className="a11y" htmlFor="style">Style</label>
             <input id="style" className="" onChange={this.handleChange} placeholder="Style"/>
           </div>
-          <div className="beer-abv-field">
+          <div className="create-beer-abv-field">
             <label className="a11y" htmlFor="abv">ABV</label>
             <input id="abv" className="" onChange={this.handleChange} placeholder="ABV"/>
           </div>

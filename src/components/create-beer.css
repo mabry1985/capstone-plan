@@ -1,0 +1,38 @@
+.create-beer-form {
+  z-index: 1;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  left: 300px;
+  top: 75px;
+}
+
+.create-beer-name-field {
+  position: relative;
+  right: 19px;
+}
+
+.create-beer-brewery-field {
+  position: relative;
+  right: 27px;
+}
+
+.create-beer-from-field {
+  position: relative;
+  right: 16px;
+}
+
+.create-beer-style-field {
+  position: relative;
+  right: 16px;
+}
+
+.create-beer-abv-field {
+  position: relative;
+  right: 13px;
+}
+
+.create-beer-price-field {
+  position: relative;
+  right: 16px;
+}

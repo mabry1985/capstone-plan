@@ -5,6 +5,7 @@
   margin: 10px;
   text-align: center;
   padding: 20px;
+  display: inline-table;
 }
 
 .cart-header {
@@ -18,4 +19,13 @@
   height: 400px;
   width: 350px;
   overflow: auto;
+  margin-top: 19px;
+}
+
+#cart-items {
+  padding: 0px;
+}
+
+#checkout {
+  margin-bottom: 5px;
 }

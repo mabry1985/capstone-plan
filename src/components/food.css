@@ -1,0 +1,13 @@
+.food-menu-items {
+  display: inline-table;
+  width: 340px;
+  margin-top: 27px;
+}
+
+.food-name{
+  width: 180px;
+}
+
+.food-price {
+  width: 30px;
+}

@@ -1,0 +1,17 @@
+.beer-menu-items {
+  display: inline-table;
+  width: 340px;
+  margin-top: 27px;
+}
+
+.beer-name{
+  width: 180px;
+}
+
+.beer-price {
+  width: 30px;
+}
+
+.edit-beer-button {
+  text-decoration: none;
+}

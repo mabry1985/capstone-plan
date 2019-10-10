@@ -1,0 +1,18 @@
+.create-food-form {
+  z-index: 10000;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  bottom: 217px;
+  left: 300px;
+}
+
+.create-food-name-field {
+  position: relative;
+  right: 19px;
+}
+
+.create-food-price-field {
+  position: relative;
+  right: 16px;
+}

@@ -70,3 +70,9 @@ button:focus {
 .error {
   color: red;
 }
+
+h5 {
+  color: #FCF6CA;
+  font-family: 'Satisfy', cursive;
+  font-size: 40px;
+}

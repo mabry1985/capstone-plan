@@ -4,13 +4,16 @@ import CreateFood from './CreateFood';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Profile from './Profile';
+import './new-menu-items.css'
 
 const NewMenuItems = (props) => {
   return(
     <div>
       <Profile />
-      <CreateBeer />
-      <CreateFood />
+      <div className="create-forms">
+        <CreateBeer />
+        <CreateFood />
+      </div>
     </div>
   )
 }

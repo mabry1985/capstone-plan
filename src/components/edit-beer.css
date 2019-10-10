@@ -1,0 +1,38 @@
+.edit-beer-form {
+  z-index: 10000;
+  display: block;
+  text-align: center;
+  position: relative;
+  top: 120px;
+  margin: auto;
+}
+
+.beer-name-field {
+  position: relative;
+  right: 19px;
+}
+
+.beer-brewery-field {
+  position: relative;
+  right: 27px;
+}
+
+.beer-from-field {
+  position: relative;
+  right: 16px;
+}
+
+.beer-style-field {
+  position: relative;
+  right: 16px;
+}
+
+.beer-abv-field {
+  position: relative;
+  right: 13px;
+}
+
+.beer-price-field {
+  position: relative;
+  right: 16px;
+}
