@@ -5,15 +5,12 @@ const Food = (props) => {
   const { food, profile } = props;
   return (
     <div className="menu-items" key={food.id}>
-        <td><h3>{food.name}</h3></td>
-        <td><p>${food.price}.00</p></td>
-        <td>
+      <h3 onClick={() => props.addToCart(food)} className="food-name">{food.name}</h3>
           {profile.admin ?
             <Link to={'/edit-food/' + food.id}>
-              <p>Edit</p>
+              <p className="edit-food-button">Edit</p>
             </Link> : null}
-        </td> 
-        <hr />
+        <p className="food-price">${food.price}</p>
       </div> 
   )
 }

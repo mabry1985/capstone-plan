@@ -1,0 +1,21 @@
+#cart {
+  color: #FCF6CA;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.cart-header {
+  color: #FCF6CA;
+  font-family: 'Satisfy', cursive;
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+
+.cart-container {
+  height: 400px;
+  width: 350px;
+  overflow: auto;
+}

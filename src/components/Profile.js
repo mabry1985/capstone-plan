@@ -51,7 +51,6 @@ export class Profile extends Component {
     const{ profile } = this.props;
     return (
       <div className="profile">
-        <p className="log-out-test" onClick={this.props.logOut}>Log-Out</p>
         <div className="table options" id="options">
           <ul id="list">
             <li className="name">{profile.firstName} {profile.lastName} :</li>

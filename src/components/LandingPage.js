@@ -25,9 +25,9 @@ class LandingPage extends React.Component {
     }
   }
   
-  componentDidMount = () => {
-    this.setState({showModal: true})
-  }
+  // componentDidMount = () => {
+  //   this.setState({showModal: true})
+  // }
 
   handleClickLogIn = (state) => {
     const wrapper = document.getElementById('wrapper');
@@ -92,7 +92,7 @@ class LandingPage extends React.Component {
     } 
 
     return (
-      <main>
+      <main className="lp-background">
         {modal}
         <img
           id="wrapper"
@@ -104,8 +104,9 @@ class LandingPage extends React.Component {
         <FadeIn>
           {content}
         </FadeIn>
-          <img className="temp-room" src={tempRoom} alt=""/>
-
+          <div className="temp-room-bg">
+            <img className="temp-room" src={tempRoom} alt=""/>
+          </div>
       </main>
     )
   }

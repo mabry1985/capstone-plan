@@ -21,26 +21,23 @@ const MainMenu = (props) => {
             <img className="main-menu-buttons sell-button" src={menuButton} alt="menu button"/> 
           </Link>
 
-          <Link to='/sell'>
+          <Link to=''>
             <img className="main-menu-buttons sell-button" src={sellButton} alt="sell button" /> 
           </Link>
         
-          <Link to='/stats'>
+          <Link to=''>
             <img className="main-menu-buttons sell-button" src={statsButton} alt="stats button" />
           </Link>
         
-          <Link to='/chat'>
+          <Link to=''>
             <img className="main-menu-buttons sell-button" src={chatButton} alt="chat button" />
           </Link>
 
-          <Link to='/games'>
+          <Link to=''>
             <img className="main-menu-buttons game-button" src={gameButton} alt="game button" />
           </Link>
       </div>
-          <Link to='/'>
             <img className="logo-main-menu" src={logo} alt="logo" />
-          </Link>
-
     </div>
   )
 }

@@ -19,34 +19,30 @@ export class Cart extends Component {
     const { profile, auth } = this.props; 
     const header =  
       <div>
-        <h1 style={{ color : 'white' }}>Cart</h1>
+        <h1 className="cart-header">Cart</h1>
       </div>
 
     if (this.props.items.length === 0) {
       return <div id="cart">
         { header }
-        <p style={{ color: 'white' }}>Select an item for more details and options to add to the cart.</p>
+        <p>Select an item to add to cart.</p>
       </div>
     }
     return (
       <div id="cart" className="col-md-3">
         {header}
-      <table border='0' className="menu-table">
-        <tbody id="cart-tbody">
+        <div className="cart-container">
           {this.props.items.map((item, index) => {
-            return <tr key={index}>
-              <td>
+            return <div key={index}>
                   <p onClick={() => this.props.removeFromCart(index)}
                      style={{ color: 'white' }}>
                     X
                   </p>
-              </td>
-              <td>{item.name}</td>
-              <td>{item.price}</td>
-            </tr>
+              <p>{item.name}</p>
+              <p>{item.price}</p>
+            </div>
           })}
-        </tbody>
-      </table>
+          </div>
       <p>Total: ${this.total()}</p>
       <button className="checkout" onClick={() => this.handleCheckout(profile, auth, this.total())}>Checkout</button>
       </div>

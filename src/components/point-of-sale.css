@@ -1,25 +1,65 @@
-.menu {
-  display: block;
-}
-
 #menu-container {
   color: #FCF6CA;
   font-family: 'Open Sans Condensed', sans-serif;
   font-weight: bold;
+  font-size: 25px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 40px 100px 40px;
   margin: 10px;
+  margin-top: 60px;
+  margin-left: 60px;
+  height: 1000px;
+}
+
+
+.item-list, .cart-list {
+  height: 700px;
+  border: 1.5px solid #FCF6CA;
+  border-radius: 40px;
+  width: 400px;
+  margin: 10px;
+  margin-bottom: 2px;
+  padding: 20px;
+}
+
+.item-list {
+  width: 800px;
 }
 
 .beer-list, .food-list {
-  grid-column: span 4;
-  
+  display: inline-block;
+  padding: 20px;
+
 }
 
-
-.menu-tbody {
-  border: 1px solid oldlace;
-  width: 330px;
-  display: table;
+.beer-list {
+  position: absolute;
+  left: 203px;
 }
+
+.food-list {
+  position: absolute;
+  left: 636px;
+}
+
+.food-list-header, .beer-list-header {
+  color: #FCF6CA;
+  font-family: 'Satisfy', cursive;
+  font-size: 40px;
+  margin-bottom: 0px;
+}
+
+.food-name:hover, .beer-name:hover {
+  cursor: pointer;
+}
+
+.vl {
+  display: inline-block;
+  border-left: 1.5px solid #FCF6CA;
+  height: 500px;
+  position: absolute;
+  left: 491px;
+  margin-left: -3px;
+  top: 209px;
+ }

@@ -22,36 +22,31 @@ class PointOfSale extends React.Component {
       <div className="menu">
 
       <Profile/>
-        <div class="row" id="menu-container">
-          
-          <div className="col-md-3 beer-list">
-            <table border='0' cellspacing="15px" className="menu-table">
-                <tbody className="menu-tbody">
-                { beer && beer.map(beer => (
-                  <div key={beer.id}>
-                    <Beer key={beer.id} beer={beer} profile={profile} />
-                    <a onClick={() => this.props.addToCart(beer)}>Buy</a>
-                  </div>
-                ))}
-                </tbody>
-            </table>
-          </div>
+        <div id="menu-container">
+          <div className="item-list">
+            <div className="beer-list">
+              <h2 className="beer-list-header">Beer</h2>
+                  { beer && beer.map(beer => (
+                    <div key={beer.id}>
+                      <Beer key={beer.id} beer={beer} addToCart={this.props.addToCart} profile={profile} />
+                    </div>
+                  ))}
+            </div>
+            
+            <div className="vl"></div>
 
-          <div className="col-md-3 food-list">
-            <table border='0' id="menu-table-food">
-              <tbody className="menu-tbody">
-                { food && food.map(food => (
-                  <div key={food.id}>
-                    <Food key={food.id} food={food} profile={profile} />
-                    <a onClick={() => this.props.addToCart(food)}>Buy</a>
-                  </div>
-                ))}
-              </tbody>
-            </table>
+            <div className="food-list">
+              <h2 className="food-list-header">Food</h2>
+                  { food && food.map(food => (
+                    <div key={food.id}>
+                      <Food key={food.id} addToCart={this.props.addToCart} food={food} profile={profile} />
+                    </div>
+                  ))}
+            </div>
           </div>
-          <tbody className="menu-tbody">
-          <Cart profile={profile}/>
-          </tbody>
+          <div className="cart-list">
+            <Cart profile={profile}/>
+          </div>
         </div>
       </div>
     );
