@@ -25,7 +25,6 @@ export class FullscreenModal extends Component {
     this.props.onModalToggle()
   }
 
-  
   render() {
     return (
       <div id="fullscreen-modal">

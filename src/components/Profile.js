@@ -1,12 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react'
 import './profile.css'
-import { fadeIn } from 'react-animations';
-import styled, { keyframes } from 'styled-components';
 import { connect } from 'react-redux';
 import { logOut } from './../actions/authActions';
-
-const FadeIn = styled.div`animation: 1s ease-in ${keyframes`${fadeIn}`}`
 
 export class Profile extends Component {
   constructor(props){
@@ -28,15 +24,6 @@ export class Profile extends Component {
       }
     })
   }
-
-  handleLogOut = () => {
-
-  }
-
-  test = () => {
-    console.log("Im working")
-  }
-  
   
   render() {
     let borderStyles = {}
@@ -48,7 +35,7 @@ export class Profile extends Component {
     }else {
       borderStyles = {};
     }
-    const{ profile } = this.props;
+    const { profile } = this.props;
     return (
       <div className="profile">
         <div className="table options" id="options">
@@ -84,4 +71,5 @@ const mapDispatchToProps = (dispatch) => {
     logOut: () => dispatch(logOut())
   }
 }
+
 export default connect(mapStateToProps, mapDispatchToProps)(Profile)
